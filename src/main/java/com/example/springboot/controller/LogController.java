@@ -20,7 +20,7 @@ public class LogController {
         logService.insert(status);
     }
 
-    @RequestMapping(value = "/log", method = RequestMethod.GET)
+    @RequestMapping(value = "/log/status", method = RequestMethod.GET)
     public String getLog(@Param(value = "status") Integer status) {
         return logService.getLog(status);
     }
