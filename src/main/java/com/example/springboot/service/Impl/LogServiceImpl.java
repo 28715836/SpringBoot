@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 @Service
 public class LogServiceImpl implements LogService {
@@ -19,5 +20,10 @@ public class LogServiceImpl implements LogService {
         log.setCreateTime(new Date());
         log.setStatus(status);
         logMapper.insert(log);
+    }
+
+    @Override
+    public String getLog(Integer status) {
+       return logMapper.weStartTime();
     }
 }

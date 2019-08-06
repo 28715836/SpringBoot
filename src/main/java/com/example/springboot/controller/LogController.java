@@ -1,5 +1,6 @@
 package com.example.springboot.controller;
 
+import com.example.springboot.modal.Log;
 import com.example.springboot.service.LogService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,5 +18,10 @@ public class LogController {
     @RequestMapping(value = "/log", method = RequestMethod.POST)
     public void addLog(@Param(value = "status") Integer status) {
         logService.insert(status);
+    }
+
+    @RequestMapping(value = "/log", method = RequestMethod.GET)
+    public String getLog(@Param(value = "status") Integer status) {
+        return logService.getLog(status);
     }
 }
