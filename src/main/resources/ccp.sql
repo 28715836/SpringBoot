@@ -46,3 +46,4 @@ CREATE TABLE `record` (
 -- Records of record
 -- ----------------------------
 INSERT INTO `record` VALUES ('1', '2019-08-18 10:16:35', 'kiss');
+INSERT INTO `record` VALUES ('1', '2021-05-23 00:30:00', 'sleep');
